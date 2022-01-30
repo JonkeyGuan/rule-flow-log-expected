@@ -7,11 +7,11 @@ rule "rule for group1"
 	dialect "mvel"
 	ruleflow-group "group1"
 	when
-	    f: Fact(field2 == "field1")
+	    f: Fact(field1 == "field1")
 	then
 	    modify(f) {
 	        setField1("modifided field1")
-	    };
+	    }
 	    Result result = new Result();
 	    List track = new ArrayList();
 	    track.add("fired group1 for init");
@@ -59,7 +59,7 @@ rule "rule for group4"
 	    modify(f) {
 	        setField4("modifided field4")
 	    }
-	    r.getTrack().add("fired rule flow group3");
+	    r.getTrack().add("fired rule flow group4");
 		System.out.println("Rule fired : [" + drools.getRule().getName()+"]");
 end
 
