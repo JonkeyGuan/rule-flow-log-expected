@@ -16,7 +16,7 @@ public class Result implements java.io.Serializable {
 		for (String t : track) {
 			sb.append(t.toString() + "\n");
 		}
-		return "Result [bizLogicResult=" + bizLogicResult + ", \ntrack=" + sb.toString() + "]";
+		return "Result [bizLogicResult is: " + bizLogicResult + ", \ntrack is below::\n" + sb.toString() + "]";
 	}
 
 	public Result() {
